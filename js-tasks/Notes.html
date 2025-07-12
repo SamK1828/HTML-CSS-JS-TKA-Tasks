@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Practice Portal</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .section {
+        background: #fff;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        padding: 10px 15px;
+        margin: 5px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      pre {
+        background: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Practice Portal</h1>
+
+    <div class="section">
+      <h2>Loops</h2>
+      <button onclick="runLoops()">Run Loops</button>
+    </div>
+
+    <div class="section">
+      <h2>If-Else Conditions</h2>
+      <button onclick="runIfElse()">Run If-Else</button>
+    </div>
+
+    <div class="section">
+      <h2>Switch Case</h2>
+      <button onclick="runSwitch()">Run Switch Case</button>
+    </div>
+
+    <div class="section">
+      <h2>DOM Manipulation</h2>
+      <button onclick="changeDOM()">Change DOM Content</button>
+      <p id="demo">This is a sample paragraph.</p>
+    </div>
+
+    <div class="section">
+      <h2>BOM Features</h2>
+      <button onclick="showBOMInfo()">Show BOM Info</button>
+      <pre id="bomInfo"></pre>
+    </div>
+
+    <script src="loops.js"></script>
+    <script src="ifelse.js"></script>
+    <script src="switchcase.js"></script>
+
+    <script>
+      function runLoops() {
+        console.clear();
+        console.log("Running loop examples...");
+        printNaturalNumbers();
+        sumFrom1To100();
+        printEvenNumbers1To50();
+        factorial(5);
+        reverseNumber(12345);
+        fibonacciSeries(10);
+        isPrime(29);
+        countDigits(123456);
+        calculatePower(2, 5);
+        printAllPrimes1To100();
+      }
+
+      function runIfElse() {
+        console.clear();
+        findLargestOfThree(10, 20, 15);
+        isLeapYear(2024);
+        isVowelOrConsonant("a");
+        checkNumberSign(-5);
+        findGrade(87);
+        isPalindrome("madam");
+        isDivisibleBy3And7(21);
+      }
+
+      function runSwitch() {
+        console.clear();
+        printMonthByNumber(4);
+        performOperation(10, 5, "*");
+        gradeDescription("B");
+      }
+
+      function changeDOM() {
+        document.getElementById("demo").innerHTML =
+          "<strong>Updated via DOM!</strong>";
+      }
+
+      function showBOMInfo() {
+        const info = `
+Navigator Info:
+- App Code Name: ${navigator.appCodeName}
+- App Name: ${navigator.appName}
+- App Version: ${navigator.appVersion}
+- Language: ${navigator.language}
+- User Agent: ${navigator.userAgent}
+- Platform: ${navigator.platform}
+- Cookies Enabled: ${navigator.cookieEnabled}
+- Online: ${navigator.onLine}
+
+Screen Info:
+- Width: ${screen.width}
+- Height: ${screen.height}
+- Available Width: ${screen.availWidth}
+- Available Height: ${screen.availHeight}
+- Color Depth: ${screen.colorDepth}
+- Pixel Depth: ${screen.pixelDepth}`;
+
+        document.getElementById("bomInfo").innerText = info;
+      }
+    </script>
+  </body>
+</html>
