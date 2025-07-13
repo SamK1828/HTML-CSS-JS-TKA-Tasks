@@ -4,7 +4,7 @@
 // ================================
 
 // 1. Print first 10 natural numbers using while loop
-function printFirst10NaturalNumbers() {
+function printNaturalNumbers() {
   let i = 1;
   while (i <= 10) {
     console.log(i);
