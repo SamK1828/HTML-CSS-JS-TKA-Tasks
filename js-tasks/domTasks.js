@@ -126,19 +126,26 @@ function applyColorsToBoxes() {
 }
 // Add Border
 // Add a function that applies a 2px solid black border to all elements with class "frame".
-function applyBorder(){
-  let obj=document.getElementsByClassName("frame");
+function applyBorder() {
+  let obj = document.getElementsByClassName("frame");
   for (let index = 0; index < obj.length; index++) {
     const element = obj[index];
-    element.style.cssText="border: 2px solid; margin:5px;";
+    element.style.cssText = "border: 2px solid; margin:5px;";
   }
 }
 // Count Items
 // Write a function that shows an alert with the total number of elements with class "item".
-function showAlertMsg(){
-  let obj=document.getElementsByClassName("item");
+function showAlertMsg() {
+  let obj = document.getElementsByClassName("item");
   alert(`Total number of .item elements: ${obj.length}`);
 }
 // Make All Text Uppercase
 // Convert the inner text of all "item" class elements to uppercase.
+function convertToUpperCase() {
+  let obj = document.getElementsByClassName("item");
 
+  for (let index = 0; index < obj.length; index++) {
+    const element = obj[index];
+    element.innerText = element.innerText.toUpperCase();
+  }
+}
