@@ -37,12 +37,38 @@ function changeBackground2() {
     element.style.backgroundColor = "white";
   }
 }
+
+function changeBackground3() {
+  let obj = document.getElementsByClassName("highlight1");
+  for (let index = 0; index < obj.length; index++) {
+    const element = obj[index];
+    element.style.backgroundColor = "white";
+  }
+
+  obj = document.getElementsByClassName("highlight2");
+  for (let index = 0; index < obj.length; index++) {
+    const element = obj[index];
+    element.style.backgroundColor = "white";
+  }
+}
+
 // Hide an Element by ID
 // Write a function that hides an element with id="box1" by setting display: none.
 
+function hideContent() {
+  let obj = document.getElementById("box1");
+  obj.style.display = "none";
+}
+
+function showContent() {
+  let obj = document.getElementById("box1");
+  obj.style.display = "block";
+}
 // Increase Font Size of Class Elements
 // Use a loop to set the font size to 24px for all elements with class="note".
-
+function changeFontSize() {
+  
+}
 // Set Image Width by ID
 // Create a function that sets the width of an image with id="profilePic" to 200px.
 
