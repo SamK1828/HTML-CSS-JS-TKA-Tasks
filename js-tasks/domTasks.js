@@ -124,10 +124,15 @@ function applyColorsToBoxes() {
     boxes[i].style.backgroundColor = colors[i % colors.length];
   }
 }
-
 // Add Border
 // Add a function that applies a 2px solid black border to all elements with class "frame".
-
+function applyBorder(){
+  let obj=document.getElementsByClassName("frame");
+  for (let index = 0; index < obj.length; index++) {
+    const element = obj[index];
+    element.style.cssText="border: 2px solid; margin:5px;";
+  }
+}
 // Count Items
 // Write a function that shows an alert with the total number of elements with class "item".
 
