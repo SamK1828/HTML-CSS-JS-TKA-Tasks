@@ -135,6 +135,10 @@ function applyBorder(){
 }
 // Count Items
 // Write a function that shows an alert with the total number of elements with class "item".
-
+function showAlertMsg(){
+  let obj=document.getElementsByClassName("item");
+  alert(`Total number of .item elements: ${obj.length}`);
+}
 // Make All Text Uppercase
 // Convert the inner text of all "item" class elements to uppercase.
+
