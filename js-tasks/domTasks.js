@@ -78,7 +78,8 @@ function changeFontSize() {
 
 function showImage() {
   document.getElementById("image").style.display = "flex";
-  document.getElementById("profilePic").style.cssText="display:block; width:200px; margin:10px; border-radius: 50%;";
+  document.getElementById("profilePic").style.cssText =
+    "display:block; width:200px; margin:10px; border-radius: 50%;";
   // document.getElementById("image").style.justifyItems="center";
 }
 
@@ -88,14 +89,42 @@ function hideImage() {
 }
 // Toggle Visibility
 // Write a function that toggles visibility of all "item" class elements (if visible â†’ hide, if hidden â†’ show).
-
+function toggleVisibility() {
+  let obj = document.getElementsByClassName("container");
+  for (let index = 0; index < obj.length; index++) {
+    const element = obj[index];
+    currentDisp = element.style.display;
+    // console.log(currentDisp)
+    element.style.display = currentDisp === "none" ? "block" : "none";
+  }
+  // obj = document.getElementsByClassName("hightlight2");
+  // for (let index = 0; index < obj.length; index++) {
+  //   const element = obj[index];
+  //   element.style.display = currentDisplay === "none" ? "block" : "none";
+  // }
+}
 // Apply Different Colors
 // Use a loop to apply different colors to elements with class "box", like:
 
 // js
 // Copy
 // Edit
-// ["red", "green", "blue", "orange", "purple"]
+// const array = ["red", "green", "blue", "orange", "purple"];
+// function applyColours() {
+//   const obj = document.getElementsByClassName("box");
+//   for (let i = 0; i < array.length; i++) {
+//     obj[0].style.backgroundColor=array[i];
+//   }
+// }
+function applyColorsToBoxes() {
+  const boxes = document.getElementsByClassName("box");
+  const colors = ["red", "green", "blue", "orange", "purple"];
+
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].style.backgroundColor = colors[i % colors.length];
+  }
+}
+
 // Add Border
 // Add a function that applies a 2px solid black border to all elements with class "frame".
 

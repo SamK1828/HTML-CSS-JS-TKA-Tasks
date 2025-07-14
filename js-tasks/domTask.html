@@ -7,70 +7,75 @@
   </head>
   <body>
     <h1 id="title">Welcome Page</h1>
+    <div class="container">
+      <p class="highlight1">
+        Change Text by ID Create a function that changes the text of an element
+        with id="title" to "Welcome to My Page".
+      </p>
+      <button onclick="changeText()">Click here to get Above Changes</button>
 
-    <p class="highlight1">
-      Change Text by ID Create a function that changes the text of an element
-      with id="title" to "Welcome to My Page".
-    </p>
-    <button onclick="changeText()">Click here to get Above Changes</button>
+      <p class="highlight2">
+        Change Background by Class <br />Change the background color of all
+        elements with class="highlight" to yellow.
+      </p>
+      <button onclick="changeBackground1()">Highlight 1</button>
+      <button onclick="changeBackground2()">Highlight 2</button>
+      <button onclick="changeBackground3()">Highlight White</button>
+      <p id="box1" class="highlight1">
+        Hide an Element by ID<br />
+        Write a function that hides an element with id="box1" by setting
+        display: none.
+      </p>
+      <div class="btn-container" style="display: block; margin: 10px">
+        <button onclick="hideContent()">Hide It</button>
+        <button onclick="showContent()">Show It</button>
+      </div>
+      <p class="highlight2">
+        Increase Font Size of Class Elements <br />Use a loop to set the font
+        size to 24px for all elements with class="note".
+      </p>
+      <p class="note">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias voluptas
+        voluptatum, itaque assumenda <br />
+        provident ipsum deleniti commodi ratione, aliquam officia eveniet id
+        fugit nulla pariatur aperiam? Dolorum, earum corporis?
+      </p>
+      <button onclick="changeFontSize()">Change Font</button>
+      <p class="highlight1">
+        Set Image Width by ID <br />Create a function that sets the width of an
+        image with id="profilePic" to 200px.
+      </p>
+      <div id="image" style="display: none">
+        <img id="profilePic" src="practice-image.png" alt="Displayed Image" />
+      </div>
+      <button onclick="showImage()">Show Image</button>
+      <button onclick="hideImage()">Hide Image</button>
+    </div>
 
-    <p class="highlight2">
-      Change Background by Class <br />Change the background color of all
-      elements with class="highlight" to yellow.
-    </p>
-    <button onclick="changeBackground1()">Highlight 1</button>
-    <button onclick="changeBackground2()">Highlight 2</button>
-    <button onclick="changeBackground3()">Highlight White</button>
-    <p id="box1" class="highlight1">
-      Hide an Element by ID<br />
-      Write a function that hides an element with id="box1" by setting display:
-      none.
-    </p>
-    <div class="btn-container" style="display: block; margin: 10px">
-      <button onclick="hideContent()">Hide It</button>
-      <button onclick="showContent()">Show It</button>
-    </div>
-    <p class="highlight2">
-      Increase Font Size of Class Elements <br />Use a loop to set the font size
-      to 24px for all elements with class="note".
-    </p>
-    <p class="note">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias voluptas
-      voluptatum, itaque assumenda <br />
-      provident ipsum deleniti commodi ratione, aliquam officia eveniet id fugit
-      nulla pariatur aperiam? Dolorum, earum corporis?
-    </p>
-    <button onclick="changeFontSize()">Change Font</button>
-    <p class="highlight1">
-      Set Image Width by ID <br />Create a function that sets the width of an
-      image with id="profilePic" to 200px.
-    </p>
-    <div id="image" style="display: none;">
-      <img
-        id="profilePic"
-        src="practice-image.png"
-        alt="Displayed Image"
-      />
-    </div>
-    <button onclick="showImage()">Show Image</button>
-    <button onclick="hideImage()">Hide Image</button>
     <p class="highlight2">
       Toggle Visibility
       <br />Write a function that toggles visibility of all "item" class
       elements (if visible â†’ hide, if hidden â†’ show).
     </p>
-
-    <p class="highlight1">
+    <button onclick="toggleVisibility()">Toggle</button>
+    <p class="box highlight1">
       Apply Different Colors <br />Use a loop to apply different colors to
-      elements with class "box", like:
+      elements with class "box", like:<br />["red", "green", "blue", "orange",
+      "purple"]<br />
     </p>
 
+    <div class="box frame" style="width: 100px; height: 100px; margin: 10px"></div>
+    <div class="box frame" style="width: 100px; height: 100px; margin: 10px"></div>
+    <div class="box frame" style="width: 100px; height: 100px; margin: 10px"></div>
+    <div class="box frame" style="width: 100px; height: 100px; margin: 10px"></div>
+    <div class="box frame" style="width: 100px; height: 100px; margin: 10px"></div>
+
+    <button onclick="applyColorsToBoxes()">Apply Colors</button>
     <p class="highlight2">
-      js Copy Edit ["red", "green", "blue", "orange", "purple"]<br />
-      Add Border Add a function that applies a 2px solid black border to all
-      elements with class "frame".
+      Add Border <br />Add a function that applies a 2px solid black border to
+      all elements with class "frame".
     </p>
-
+    <button onclick="applyBorder()">Apply Border</button>
     <p class="highlight1">
       Count Items <br />Write a function that shows an alert with the total
       number of elements with class "item". <br />Make All Text Uppercase
