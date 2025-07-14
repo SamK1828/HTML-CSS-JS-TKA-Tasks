@@ -67,7 +67,11 @@ function showContent() {
 // Increase Font Size of Class Elements
 // Use a loop to set the font size to 24px for all elements with class="note".
 function changeFontSize() {
-  
+  let obj=document.getElementsByClassName("note");
+  for (let index = 0; index < obj.length; index++) {
+    const element = obj[index];
+    element.style.fontSize="24px";
+  }
 }
 // Set Image Width by ID
 // Create a function that sets the width of an image with id="profilePic" to 200px.
