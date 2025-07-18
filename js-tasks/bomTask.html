@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>BOM => Browser Object Model</h1>
+    <div style="display:flex; flex-direction: column; width: 100px; gap: 5px; ">
+      <button onclick="bomFunction()">Click Here</button>
+      <button onclick="alert('This is an alert After Clicking!!')">
+        Click to Get Alert
+      </button>
+      <button onclick="promptFunction()">
+        Click to Get Prompt
+      </button>
+      <button onclick="bomConsoleFunction()">Click and See Console</button>
+    </div>
+
+    <script>
+      function bomFunction() {
+        document.writeln(
+          "<br>navigator app Code Name: " + navigator.appCodeName
+        );
+        document.writeln("<br>navigator app Name: " + navigator.appName);
+        document.writeln("<br>navigator app Version: " + navigator.appVersion);
+        document.writeln(
+          "<br>navigator cookie Enabled: " + navigator.cookieEnabled
+        );
+        document.writeln("<br>navigator language: " + navigator.language);
+        document.writeln("<br>navigator userAgent: " + navigator.userAgent);
+        document.writeln("<br>navigator platform: " + navigator.platform);
+        document.writeln("<br>navigator onLine: " + navigator.onLine);
+      }
+      function promptFunction(){
+        let name = prompt('This is an Prompt, Prompt Your name !!!!')
+        greet(name);
+      }
+      function bomConsoleFunction() {
+        // ### ✅ 1. `window` Methods – Try in Console
+
+        // ```javascript
+        // alert("Hello from alert!");
+        // confirm("Do you want to proceed?");
+        // prompt("Enter your name:");
+        // ```
+        console.log("App Code Name:", navigator.appCodeName);
+        console.log("App Name:", navigator.appName);
+        console.log("App Version:", navigator.appVersion);
+        console.log("Cookies Enabled:", navigator.cookieEnabled);
+        console.log("Language:", navigator.language);
+        console.log("User Agent:", navigator.userAgent);
+        console.log("Platform:", navigator.platform);
+        console.log("Online Status:", navigator.onLine);
+
+        // ### ✅ 3. `screen` Object Properties
+
+        // javascript
+        console.log("Screen Width:", screen.width);
+        console.log("Screen Height:", screen.height);
+        console.log("Available Width:", screen.availWidth);
+        console.log("Available Height:", screen.availHeight);
+        console.log("Color Depth:", screen.colorDepth);
+        console.log("Pixel Depth:", screen.pixelDepth);
+      }
+
+      function greet(name) {
+        console.log("Welcome " + name);
+      }
+
+      // setTimeout(() => {
+      //   console.log(greet("Samarth"));
+      // }, 3000); // Prints after 3 seconds
+
+      // ### ✅ 4. Dialog Comparison Table (Not code, for understanding)
+      // | Dialog      | Trigger Example            | Returns             |
+      // | ----------- | -------------------------- | ------------------- |
+      // | `alert()`   | `alert("Hi!")`             | `undefined`         |
+      // | `confirm()` | `confirm("Are you sure?")` | `true` / `false`    |
+      // | `prompt()`  | `prompt("Your name?")`     | user input / `null` |
+    </script>
+  </body>
+</html>
